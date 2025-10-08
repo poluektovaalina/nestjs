@@ -5,6 +5,8 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Button } from "@heroui/
 import Image from "next/image";
 import Link from "next/link"
 import { usePathname } from "next/navigation";
+import styles from "./header.module.css"
+import RegistractionModal from "../modals/Registraction.modal.tsx/registraction.modal";
 
 export const Logo = () => {
     return (
@@ -32,13 +34,13 @@ export const Logo = () => {
 
 export default function Header() {
 
-   
+
 
     const pathName = usePathname();
 
     return (
-        <Navbar position="static">
-            <NavbarBrand>
+        <Navbar className={styles.header} position="static">
+            <NavbarBrand className={styles.headerone}>
                 <Logo />
                 <p className="font-bold text-inherit">{siteConfig.title}</p>
             </NavbarBrand>
@@ -66,6 +68,8 @@ export default function Header() {
                     </Button>
                 </NavbarItem>
             </NavbarContent>
+            <RegistractionModal />
+
         </Navbar>
     );
 }

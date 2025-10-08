@@ -1,0 +1,12 @@
+.headerone{
+    display: flex;
+    gap: 10px;
+}
+
+.header{
+    padding: 0;
+    min-width: 10vh;
+    header{
+        padding: 0;
+    }
+}
